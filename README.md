@@ -10,7 +10,7 @@ You have some options here, depending on the settings your administrators (if an
 Create a bookmark with the following as the URL:
 
 ```js
-javascript:(function(){const script=document.createElement("script");script.src="https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/refs/heads/main/index.js";document.body.appendChild(script);})();
+javascript:(function(){const r=new XMLHttpRequest;r.open("GET", "https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/main/index.js");r.onloadend=function(){new Function(r.responseText)();};r.send();})();
 ```
 
 Then, go to n-gon and click the bookmark.
@@ -20,7 +20,7 @@ Then, go to n-gon and click the bookmark.
 Paste the following into the console of your browser's Developer Tools.
 
 ```js
-(function(){const script=document.createElement("script");script.src="https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/refs/heads/main/index.js";document.body.appendChild(script);})();
+(function(){const r=new XMLHttpRequest;r.open("GET", "https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/main/index.js");r.onloadend=function(){new Function(r.responseText)();};r.send();})();
 ```
 
 (If it doesn't let you paste, follow its instructions for it to let you paste.)
@@ -40,7 +40,7 @@ Then, hit Enter to run the code.
 ```diff
       <script src="js/engine.js"></script>
       <script src="js/index.js"></script>
-+     <script src="https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/refs/heads/main/index.js"></script>
++     <script>(function(){const r=new XMLHttpRequest;r.open("GET", "https://raw.githubusercontent.com/Ant-Throw-Pology/n-qol/main/index.js");r.onloadend=function(){new Function(r.responseText)();};r.send();})();</script>
   </body>
   
   </html>
