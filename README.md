@@ -50,6 +50,7 @@ Then, hit Enter to run the code.
 
 ## Features
 
-1. Improved `powerUps.spawnDelay` - It doesn't take as long
-   - Set `powerUps.spawnRate` to set how many powerups of each type are spawned per tick (default 10)
-2. Improved powerup collecting - You can collect multiple powerups at once
+- Improved `powerUps.spawnDelay` - It doesn't take as long
+   * Set `powerUps.spawnRate` to set how many powerups of each type are spawned per tick (default 10)
+- Improved powerup collecting - You can collect multiple powerups at once
+- Removed powerup recoil - so you don't fly into the stratosphere from late-game interest
