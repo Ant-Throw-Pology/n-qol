@@ -59,6 +59,7 @@
                     powerUp[i].effect();
                     Matter.Composite.remove(engine.world, powerUp[i]);
                     powerUp.splice(i, 1);
+                    if (simulation.isChoosing) return; // prevent choice overlap
                     i--; // this element removed
                 }
             }
