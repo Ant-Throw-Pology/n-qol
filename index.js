@@ -52,10 +52,10 @@
                     (powerUp[i].name !== "heal" || m.maxHealth - m.health > 0.01 || tech.isOverHeal)
                 ) {
                     powerUps.onPickUp(powerUp[i]);
-                    Matter.Body.setVelocity(player, { //player knock back, after grabbing power up
-                        x: player.velocity.x + powerUp[i].velocity.x / player.mass * 4 * powerUp[i].mass,
-                        y: player.velocity.y + powerUp[i].velocity.y / player.mass * 4 * powerUp[i].mass
-                    });
+                    // Matter.Body.setVelocity(player, { //player knock back, after grabbing power up
+                    //     x: player.velocity.x + powerUp[i].velocity.x / player.mass * 4 * powerUp[i].mass,
+                    //     y: player.velocity.y + powerUp[i].velocity.y / player.mass * 4 * powerUp[i].mass
+                    // });
                     powerUp[i].effect();
                     Matter.Composite.remove(engine.world, powerUp[i]);
                     powerUp.splice(i, 1);
