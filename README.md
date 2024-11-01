@@ -34,7 +34,7 @@ Then, hit Enter to run the code.
 3. Click "Download ZIP".
 4. Extract the contents of the downloaded zip file into a location on your computer, preferably one you can find easily later.
 5. Open that location in your computer's file explorer, then open the "n-gon-master" folder inside that.
-6. Open the "index.html" file inside that folder in your favorite text editor. If you don't have one, you can use (the online version of VSCode)[https://vscode.dev].
+6. Open the "index.html" file inside that folder in your favorite text editor. If you don't have one, you can use [the online version of VSCode](https://vscode.dev).
 7. At the bottom, between the `</script>` and the `</body>`, add:
 
 ```diff
