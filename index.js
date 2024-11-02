@@ -13,7 +13,7 @@
                         if ((counts[key] -= spawn) > 0) again = true;
                         try {
                             for (let i = 0; i < spawn; i++) {
-                                powerUps.spawn(m.pos.x + 50 * (Math.random() - 0.5), m.pos.y + 50 * (Math.random() - 0.5), type);
+                                powerUps.spawn(m.pos.x + 50 * (Math.random() - 0.5), m.pos.y + 50 * (Math.random() - 0.5), key);
                             }
                         } catch (e) {
                             console.error(e);
