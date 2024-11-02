@@ -1,5 +1,5 @@
 (function() {
-    const counts = {};
+    const counts = powerUps.spawnQueue = {};
     let running = false;
     powerUps.spawnDelay = function(type, count) {
         counts[type] = (counts[type] || 0) + count;
@@ -61,6 +61,25 @@
                     powerUp.splice(i, 1);
                     i--; // this element removed
                 }
+            }
+        }
+        const rate = powerUps.useRate || 1000;
+        for (const [key, value] of Object.entries(powerUps.spawnQueue)) {
+            if (value < 400) continue;
+            const use = Math.min(Math.floor(value * 0.01));
+            try {
+                for (let i = 0; i < use; i++) {
+                    if (
+                        !simulation.isChoosing &&
+                        (key !== "heal" || m.maxHealth - m.health > 0.01 || tech.isOverHeal)
+                    ) {
+                        powerUps[key].effect();
+                        powerUps.spawnQueue[key]--;
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+                delete powerUps.spawnQueue[key];
             }
         }
     }
